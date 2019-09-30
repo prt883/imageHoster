@@ -1,8 +1,8 @@
-/*
 package ImageHoster.controller;
 
 import ImageHoster.model.User;
 import ImageHoster.model.UserProfile;
+import ImageHoster.service.CommentService;
 import ImageHoster.service.ImageService;
 import ImageHoster.service.UserService;
 import org.junit.Test;
@@ -36,6 +36,9 @@ public class UserControllerTest {
 
     @MockBean
     private ImageService imageService;
+
+    @MockBean
+    private CommentService commentService;
 
     //This test checks the controller logic for user signup when user requests for a registration form and checks whether the logic returns the html file 'users/registration.html'
     @Test
@@ -167,4 +170,3 @@ public class UserControllerTest {
                 .andExpect(content().string(containsString("Image Hoster")));
     }
 }
-*/
